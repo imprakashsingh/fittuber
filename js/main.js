@@ -49,4 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
+
+    // LOGIN/LOGOUT LOGIC
+    function isLoggedIn() {
+      return localStorage.getItem('fittuberUser') !== null;
+    }
+    function updateNavAuth() {
+      const loginNav = document.getElementById('loginNav');
+      const logoutNav = document.getElementById('logoutNav');
+      if (!loginNav || !logoutNav) return;
+      if (isLoggedIn()) {
+        loginNav.style.display = 'none';
+        logoutNav.style.display = 'inline-block';
+      } else {
+        loginNav.style.display = 'inline-block';
+        logoutNav.style.display = 'none';
+      }
+    }
+    function logoutUser() {
+      localStorage.removeItem('fittuberUser');
+      updateNavAuth();
+      window.location.href = 'index.html';
+    }
+    updateNavAuth();
 });
