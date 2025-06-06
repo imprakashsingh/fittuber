@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fittuber - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="contact-main">
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+        </section>
+        <section class="contact-form-section">
+            <form class="contact-form" id="contactForm" autocomplete="off">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="name" required>
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" required>
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+                <div class="form-message" id="contactMessageBox"></div>
+            </form>
+        </section>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>

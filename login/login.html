@@ -14,21 +14,19 @@
 
 <body>
   <div class="wrapper">
-    <form action="">
+    <form action="" id="loginForm" autocomplete="off">
       <h1>Login</h1>
       <div class="input-box">
-        <input type="text" placeholder="Username" required>
-        <i class='bx bxs-user'></i>
+        <input type="email" placeholder="Email" name="email" required>
+        <i class='bx bx-envelope'></i>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" name="password" required>
         <i class='bx bxs-lock-alt'></i>
       </div>
-      <div class="remember-forgot">
-        <label><input type="checkbox">Remember Me</label>
-        <a href="#">Forgot Password</a>
-      </div>
+      <div id="recaptcha-container" class="recaptcha-container"></div>
       <button type="submit" class="btn">Login</button>
+      <div class="form-message" id="loginMessage" style="margin-top:1rem;"></div>
       <p id="zoom">Or</p>
       <p id="zoom">Login In with</p>
       <div class="social">

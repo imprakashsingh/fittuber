@@ -134,3 +134,9 @@ body {
 .register .social {
     margin-left: 117px;
 }
+
+.recaptcha-container {
+  margin: 1rem 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
